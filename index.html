@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
-  <link rel="icon" type="image/jpg" href="images/EvgeniiNikishin.jpg">
+  <link rel="icon" type="image/jpg" href="images/EN_Nepal.jpg">
 </head>
 
 <body>
@@ -40,7 +40,20 @@
               </p>
             </td>
             <td style="padding:2.5%;width:40%;max-width:40%">
-              <img style="width:100%;max-width:100%;border-radius:50%;" alt="profile photo" src="images/EvgeniiNikishin.jpg">
+              <div id="photo">
+              <script type='text/javascript'>
+              var images = [
+              "images/EN_Nepal.jpg",
+              "images/EN_JonesBeach.jpeg"
+              ];
+              var swapIndexA = Math.floor(Math.random() * images.length);
+              var swapIndexB = Math.floor(Math.random() * images.length);
+              var temp = images[swapIndexA];
+              images[swapIndexA] = images[swapIndexB];
+              images[swapIndexB] = temp;
+              document.write("<img style=\"width:100%;max-width:100%;border-radius:50%;\" alt=\"profile photo\" src='" + images.shift() + "' />");
+              </script>
+            </div>
             </td>
           </tr>
         </tbody></table>
