@@ -6,12 +6,129 @@
   <meta name="author" content="Evgenii Nikishin">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <style type="text/css">
+    /* Color scheme stolen from Sergey Karayev */
+
+    a {
+      color: #1772d0;
+      text-decoration: none;
+    }
+
+    a:focus,
+    a:hover {
+      color: #f09228;
+      text-decoration: none;
+    }
+
+    body,
+    td,
+    th,
+    tr,
+    p,
+    a {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-weight: 300;
+      font-size: 16px
+    }
+
+    strong {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 16px;
+    }
+
+    heading {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 22px;
+    }
+
+    papertitle {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 16px;
+      font-weight: 700
+    }
+
+    name {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 32px;
+    }
+
+    .one {
+      width: 160px;
+      height: 160px;
+      position: relative;
+    }
+
+    .two {
+      width: 160px;
+      height: 160px;
+      position: absolute;
+      transition: opacity .2s ease-in-out;
+      -moz-transition: opacity .2s ease-in-out;
+      -webkit-transition: opacity .2s ease-in-out;
+    }
+
+    .fade {
+      transition: opacity .2s ease-in-out;
+      -moz-transition: opacity .2s ease-in-out;
+      -webkit-transition: opacity .2s ease-in-out;
+    }
+
+    .instructorphoto img {
+      width: 200px;
+      border-radius: 200px;
+      margin-bottom: 10px;
+    }
+
+    .container {
+      width: 1024px;
+      min-height: 200px;
+      margin: 0 auto; /* top and bottom, right and left */
+      border: 1px hidden #000;
+      /* border: none; */
+      text-align: center;
+      padding: 1em 1em 1em 1em; /* top, right, bottom, left */
+      color: #4d4b59;
+      background: #FFFFFF;
+    }
+
+    .paper {
+      clear: both;
+      /* width: 600px; */
+      margin: 0 auto; /* top and bottom, right and left */
+      border: 1px hidden #000;
+      /* border: none; */
+      text-align: left;
+      padding: 0.5em 1em 1em 0em; /* top, right, bottom, left */
+      color: #4d4b59;
+      background: #FFFFFF;
+    }
+    .news {
+      margin: 0 auto; /* top and bottom, right and left */
+      border: none;
+      text-align: left;
+      padding: -10em 1em 1em 1em; /* top, right, bottom, left */
+    }
+
+    div.paper pre {
+      font-size: 0.8em;
+    }
+
+    li:not(:last-child) {
+        margin-bottom: 8px;
+    }
+
+    span.highlight {
+      background-color: #ffffd0;
+    }
+  </style>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link rel="icon" type="image/jpg" href="images/EN_Nepal.jpg">
 </head>
 
 <body>
-  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+  <table style="width:100%;max-width:950px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
     <tr style="padding:0px">
       <td style="padding:0px">
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
@@ -20,14 +137,14 @@
               <p style="text-align:center">
                 <name>Evgenii Nikishin</name>
               </p>
-              <p>I am a PhD student at MILA, University of Montreal, where I have the good fortune of being advised by <a href="http://pierrelucbacon.com/">Pierre-Luc Bacon</a> and <a href="https://scholar.google.com/citations?user=km6CP8cAAAAJ">Aaron Courville</a>. I am broadly interested in Reinforcement Learning and Optimization for Deep Learning. 
+              <p>I am a PhD student at Mila, University of Montreal, where I have the good fortune of being advised by <a href="http://pierrelucbacon.com/">Pierre-Luc Bacon</a> and <a href="https://scholar.google.com/citations?user=km6CP8cAAAAJ">Aaron Courville</a>. I am broadly interested in Reinforcement Learning and Optimization for Deep Learning. 
               </p>
               <p>
                 Previously, I spent 1.5 years at Cornell University. I received an MS in Computer Science from Higher School of Economics and Skoltech where I worked with <a href="https://bayesgroup.ru/people/dmitry-vetrov/">Dmitry Vetrov</a> at Samsung lab.
                 I did my undergrad in CS at Lomonosov Moscow State University supervised by <a href="https://www.kaggle.com/dyakonov">Alexander Dyakonov</a>. 
               </p>
               <p>
-                I spent summer 2020 remotely interning at MILA with <a href="http://pierrelucbacon.com/">Pierre-Luc Bacon</a> and <a href="https://yoshuabengio.org/">Yoshua Bengio</a>.
+                I spent summer 2020 remotely interning at Mila with <a href="http://pierrelucbacon.com/">Pierre-Luc Bacon</a> and <a href="https://yoshuabengio.org/">Yoshua Bengio</a>.
                 In summer 2018, I interned at ETH Zürich with <a href="https://scholar.google.com/citations?user=tQuQ1FwAAAAJ">Gunnar Rätsch</a> applying RL for personal treatment. 
                 I also worked at Kaspersky Lab in 2016 on the detection of malicious software with ML.
               </p>
@@ -70,6 +187,31 @@
 
           <tr>
             <td style="padding:10px;width:30%;vertical-align:middle">
+                <img src='images/omd.png' width="100%">
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://arxiv.org/abs/2106.03273">
+                <papertitle>Control-Oriented Model-Based Reinforcement Learning with Implicit Differentiation</papertitle>
+              </a>
+              <br>
+              <strong>Evgenii Nikishin</strong>,
+              Romina Abachi,
+              Rishabh Agarwal,
+              Pierre-Luc Bacon
+              <br>
+              <em>ArXiv Preprint</em>, 2021
+              <br>
+              [<a href="https://arxiv.org/pdf/2106.03273.pdf">PDF</a>,
+              <a href="https://github.com/evgenii-nikishin/omd">Code</a>]
+              <br>
+              <p></p>
+              <p>A model learning method for RL that directly optimizes the sum of rewards instead of likelihood, a proxy to the agent's objective.
+              </p>
+            </td>
+          </tr>
+
+          <tr>
+            <td style="padding:10px;width:30%;vertical-align:middle">
                 <img src='images/dyn_aae.png' width="100%">
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
@@ -83,7 +225,8 @@
               <br>
               <em>NeurIPS Workshop Track</em>, 2019
               <br>
-              [<a href="https://github.com/evgenii-nikishin/dyn_aae">Code</a>,
+              [<a href="http://bayesiandeeplearning.org/2019/papers/102.pdf">PDF</a>,
+              <a href="https://github.com/evgenii-nikishin/dyn_aae">Code</a>,
               <a href="data/dyn_aae_poster.pdf">Poster</a>]
               <br>
               <p></p>
@@ -112,7 +255,8 @@
               <br>
               <em>UAI Workshop Track</em>, 2018
               <br>
-              [<a href="data/rl_swa_poster.pdf">Poster</a>]
+              [<a href="http://www.gatsby.ucl.ac.uk/~balaji/udl-camera-ready/UDL-24.pdf">PDF</a>,
+              <a href="data/rl_swa_poster.pdf">Poster</a>]
               <br>
               <p></p>
               <p>Averaging weights during training of an RL agent stabilizes the achieved performance.
@@ -125,7 +269,7 @@
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
             <td style="padding:20px;width:100%;vertical-align:middle">
-              <div style="float: left">Last update: February 2021.</div>
+              <div style="float: left">Last update: June 2021.</div>
               <div style="float: right">Credit for the template to <a href="https://jonbarron.info/">Jon Barron</a>.</div>
             </td>
           </tr>
