@@ -120,6 +120,38 @@
     span.highlight {
       background-color: #ffffd0;
     }
+
+    .research-thumbnail {
+      display: block;
+      margin: 0 auto;
+      max-height: 150px;
+      max-width: 100%;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .research-thumbnail--framed {
+      background: #f4f4f4;
+      border-radius: 12px;
+      padding: 12px;
+    }
+
+    .research-thumbnail--o3 {
+      background: radial-gradient(circle at top left, #222739, #0f1321 65%, #05070f 100%);
+      border: 1px solid rgba(107, 122, 168, 0.65);
+      /*box-shadow: 0 14px 32px rgba(7, 11, 24, 0.65);*/
+      filter: contrast(1.2) brightness(1.05);
+      padding: 14px;
+      max-height: 140px;
+    }
+
+    .research-thumbnail-pair {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
   </style>
 
   <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
@@ -202,7 +234,44 @@
 
           <tr>
             <td style="padding:10px;width:30%;vertical-align:middle">
-                <img src='images/fox.png' width="100%">
+              <div class='research-thumbnail-pair'>
+                <img src='images/gpt5-swebench.png' class='research-thumbnail'>
+                <img src='images/gpt5-mmmu.png' class='research-thumbnail'>
+              </div>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://openai.com/index/introducing-gpt-5/">
+                <papertitle>GPT-5 Model Contributor</papertitle>
+              </a>
+              <br>
+              2025
+              <br>
+              [<a href="https://openai.com/index/introducing-gpt-5/">Blogpost</a>]
+              <br>
+              <p></p>
+            </td>
+          </tr>
+
+          <tr>
+            <td style="padding:10px;width:30%;vertical-align:middle">
+                <img src='images/o3.png' class='research-thumbnail research-thumbnail--framed research-thumbnail--o3'>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://openai.com/index/introducing-o3-and-o4-mini/">
+                <papertitle>OpenAI o3 Model Contributor</papertitle>
+              </a>
+              <br>
+              2025
+              <br>
+              [<a href="https://openai.com/index/introducing-o3-and-o4-mini/">Blogpost</a>]
+              <br>
+              <p></p>
+            </td>
+          </tr>
+
+          <tr>
+            <td style="padding:10px;width:30%;vertical-align:middle">
+                <img src='images/fox.png' class='research-thumbnail'>
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://arxiv.org/abs/2503.02130">
@@ -226,7 +295,7 @@
 
           <tr>
             <td style="padding:10px;width:30%;vertical-align:middle">
-                <img src='images/sparsity.png' width="100%">
+                <img src='images/sparsity.png' class='research-thumbnail'>
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://arxiv.org/abs/2403.07688">
@@ -252,7 +321,7 @@
 
           <tr>
             <td style="padding:10px;width:30%;vertical-align:middle">
-                <img src='images/curse_1.png' width="100%">
+                <img src='images/curse_1.png' class='research-thumbnail'>
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://arxiv.org/abs/2405.04342">
@@ -277,7 +346,7 @@
 
           <tr>
             <td style="padding:10px;width:30%;vertical-align:middle">
-                <img src='images/plasticity_injection.png' width="100%">
+                <img src='images/plasticity_injection.png' class='research-thumbnail'>
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://arxiv.org/abs/2305.15555">
@@ -305,7 +374,7 @@
 
           <tr>
             <td style="padding:10px;width:30%;vertical-align:middle">
-                <img src='images/understanding_plasticity.png' width="100%">
+                <img src='images/understanding_plasticity.png' class='research-thumbnail'>
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://arxiv.org/abs/2303.01486">
@@ -331,7 +400,7 @@
 
           <tr>
             <td style="padding:10px;width:30%;vertical-align:middle">
-                <img src='images/rl_scaling_with_resets.png' width="100%">
+                <img src='images/rl_scaling_with_resets.png' class='research-thumbnail'>
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://openreview.net/forum?id=OpC-9aBBVJe">
@@ -359,7 +428,7 @@
 
           <tr>
             <td style="padding:10px;width:30%;vertical-align:middle">
-                <img src='images/rl_with_resets.png' width="100%">
+                <img src='images/rl_with_resets.png' class='research-thumbnail'>
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://arxiv.org/abs/2205.07802">
@@ -388,7 +457,7 @@
 
           <tr>
             <td style="padding:10px;width:30%;vertical-align:middle">
-                <img src='images/omd.png' width="100%">
+                <img src='images/omd.png' class='research-thumbnail'>
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://arxiv.org/abs/2106.03273">
@@ -414,7 +483,7 @@
 
           <tr>
             <td style="padding:10px;width:30%;vertical-align:middle">
-                <img src='images/adversarial.png' width="100%">
+                <img src='images/adversarial.png' class='research-thumbnail'>
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://arxiv.org/abs/2112.06276">
@@ -439,7 +508,7 @@
 
           <tr>
             <td style="padding:10px;width:30%;vertical-align:middle">
-                <img src='images/dyn_aae.png' width="100%">
+                <img src='images/dyn_aae.png' class='research-thumbnail'>
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="http://bayesiandeeplearning.org/2019/papers/102.pdf">
@@ -464,7 +533,7 @@
 
           <tr>
             <td style="padding:10px;width:30%;vertical-align:middle">
-                <img src='images/rl_swa.png' width="100%">
+                <img src='images/rl_swa.png' class='research-thumbnail'>
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://www.gatsby.ucl.ac.uk/~balaji/udl-camera-ready/UDL-24.pdf">
@@ -496,7 +565,7 @@
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
             <td style="padding:20px;width:100%;vertical-align:middle">
-              <div style="float: left">Last update: Jun 2025.</div>
+              <div style="float: left">Last update: Oct 2025.</div>
               <div style="float: right">Credit for the template to <a href="https://jonbarron.info/">Jon Barron</a>.</div>
             </td>
           </tr>
